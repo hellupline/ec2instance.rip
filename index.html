@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello World from Plan9</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+    </head>
+    <body>
+        <div>WE HAVENT CREATED ANY EC2 INSTANCE FOR <span id=time-elapsed></span> SECONDS</div>
+        <img src="https://hellupline.dev/uploads/gallery/Rubiks_Sign.png" width="250" height="250">
+        <script>
+            const lastCreated = new Date(2021, 01, 03, 15, 09, 37);
+            function updateClock() {
+                const now = new Date();
+                const seconds = Math.round((now - lastCreated) / 1000);
+                const text = `${seconds}`;
+                document.getElementById("time-elapsed").innerHTML = text;
+            }
+            updateClock();
+            timer = setInterval(updateClock, 1000);
+        </script>
+    </body>
+<html>
